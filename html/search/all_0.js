@@ -1,0 +1,27 @@
+var searchData=
+[
+  ['_24already_5freviewed_0',['$already_reviewed',['../game_8php.html#a9bd78c670e55026cc845f9db6ee31e1c',1,'game.php']]],
+  ['_24charset_1',['$charset',['../db_8php.html#af10158dd74b75f1d337e83102d6b82ce',1,'db.php']]],
+  ['_24count_5fstmt_2',['$count_stmt',['../index_8php.html#ae01d995e3784befcfae9dc59435bd049',1,'index.php']]],
+  ['_24error_5fmsg_3',['$error_msg',['../admin_8php.html#acf910733622c1fa671b9f755c69c2ec7',1,'admin.php']]],
+  ['_24games_4',['$games',['../index_8php.html#a8b9258a0949c521830380818e33c164f',1,'index.php']]],
+  ['_24host_5',['$host',['../db_8php.html#a711797613cb863ca0756df789c396bf2',1,'db.php']]],
+  ['_24is_5fadmin_6',['$is_admin',['../game_8php.html#a5766e80b096314e3e65b09ce3f84e6e4',1,'game.php']]],
+  ['_24limit_7',['$limit',['../index_8php.html#a18f8f89d003db571f8100862e2e835aa',1,'index.php']]],
+  ['_24my_5freviews_8',['$my_reviews',['../profile_8php.html#aeca95581c613b3c03ea14608f4b10899',1,'profile.php']]],
+  ['_24offset_9',['$offset',['../index_8php.html#a8edb8cdd2721cb885481db9ca93456ae',1,'index.php']]],
+  ['_24old_5fdata_10',['$old_data',['../register_8php.html#a18917aedbf0d4a2e12df9ff70346d086',1,'register.php']]],
+  ['_24options_11',['$options',['../db_8php.html#a011800c63ece4cbbfa77136a20607023',1,'db.php']]],
+  ['_24page_12',['$page',['../index_8php.html#a0a44e6760141442bb439b1ab1395d8ff',1,'index.php']]],
+  ['_24query_13',['$query',['../search-ajax_8php.html#af59a5f7cd609e592c41dc3643efd3c98',1,'$query:&#160;search-ajax.php'],['../search_8php.html#af59a5f7cd609e592c41dc3643efd3c98',1,'$query:&#160;search.php']]],
+  ['_24results_14',['$results',['../search_8php.html#a233d12bd8b6d3453e9a7a3f0b8c31db2',1,'search.php']]],
+  ['_24review_15',['$review',['../edit-review_8php.html#a6b394ad63cf3075798587735606baecf',1,'edit-review.php']]],
+  ['_24sql_16',['$sql',['../index_8php.html#a047170d6020a882807665812a27e2525',1,'index.php']]],
+  ['_24sql_5freviews_17',['$sql_reviews',['../profile_8php.html#a8c772383f319f9d4d52984fcd4b27d6b',1,'profile.php']]],
+  ['_24stmt_18',['$stmt',['../edit-review_8php.html#af27a9140d5f2658693e7fd107f716449',1,'$stmt:&#160;edit-review.php'],['../index_8php.html#af27a9140d5f2658693e7fd107f716449',1,'$stmt:&#160;index.php'],['../profile_8php.html#af27a9140d5f2658693e7fd107f716449',1,'$stmt:&#160;profile.php']]],
+  ['_24total_5fgames_19',['$total_games',['../index_8php.html#a109362ec1fb689a0de66a72bd7b26e47',1,'index.php']]],
+  ['_24total_5fpages_20',['$total_pages',['../index_8php.html#a75dd972125f47d333492e70523d1aa6a',1,'index.php']]],
+  ['_24user_21',['$user',['../profile_8php.html#a598ca4e71b15a1313ec95f0df1027ca5',1,'profile.php']]],
+  ['_24user_5fid_22',['$user_id',['../edit-review_8php.html#af0fcd925f00973e32f7214859dfb3c6b',1,'$user_id:&#160;edit-review.php'],['../game_8php.html#af0fcd925f00973e32f7214859dfb3c6b',1,'$user_id:&#160;game.php']]],
+  ['_24users_23',['$users',['../admin-users_8php.html#a28005d22fa7ef2dfe215ad886b497d9c',1,'admin-users.php']]]
+];

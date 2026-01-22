@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dokumentace - GameCorner</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #f9f9f9;
+        }
+        .container {
+            background-color: #fff;
+            padding: 40px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+            border-radius: 8px;
+        }
+        h1 {
+            color: #2c3e50;
+            border-bottom: 2px solid #3498db;
+            padding-bottom: 10px;
+            margin-top: 0;
+        }
+        h2 {
+            color: #2980b9;
+            margin-top: 30px;
+            border-bottom: 1px solid #eee;
+            padding-bottom: 5px;
+        }
+        h3 {
+            color: #34495e;
+            margin-top: 20px;
+        }
+        ul {
+            list-style-type: disc;
+            padding-left: 20px;
+        }
+        li {
+            margin-bottom: 8px;
+        }
+        code {
+            background-color: #f0f0f0;
+            padding: 2px 5px;
+            border-radius: 3px;
+            font-family: Consolas, monospace;
+            color: #e74c3c;
+        }
+        .meta-info {
+            background-color: #e8f6f3;
+            padding: 15px;
+            border-radius: 5px;
+            margin-bottom: 30px;
+            border-left: 5px solid #1abc9c;
+        }
+        footer {
+            text-align: center;
+            margin-top: 40px;
+            font-size: 0.9em;
+            color: #777;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    
+    <h1>Produktová dokumentace (User Guide)</h1>
+    
+    <div class="meta-info">
+        <p><strong>Název projektu:</strong> GameCorner - Webová aplikace pro recenze her</p>
+        <p><strong>Autor:</strong> Oleksii Kovalov</p> 
+    </div>
+
+    <h2>1. Úvod</h2>
+    <p>GameCorner je webová platforma, která uživatelům umožňuje prohlížet videohry, číst recenze a sdílet své vlastní názory. Aplikace rozlišuje mezi běžnými uživateli a administrátory.</p>
+
+    <h2>2. Funkce pro uživatele</h2>
+    <ul>
+        <li><strong>Registrace a Přihlášení:</strong> Uživatel se může zaregistrovat pomocí e-mailu a hesla. Při přihlášení je k dispozici funkce "Remember Me" pro trvalé přihlášení.</li>
+        <li><strong>Prohlížení her:</strong> Na hlavní stránce je seznam her se stránkováním.</li>
+        <li><strong>Vyhledávání:</strong> V záhlaví je k dispozici "Live Search" (AJAX), který našeptává hry podle názvu v reálném čase.</li>
+        <li><strong>Psaní recenzí:</strong> Přihlášený uživatel může udělit hodnocení (1-10), napsat text a nahrát screenshoty ke hře.</li>
+        <li><strong>Editace profilu:</strong> V sekci "My Profile" vidí uživatel své recenze a může je mazat.</li>
+    </ul>
+
+    <h2>3. Funkce pro administrátora</h2>
+    <p>Administrátor má rozšířená práva:</p>
+    <ul>
+        <li>Může mazat jakoukoli recenzi (i cizí) pro moderování obsahu.</li>
+        <li>V sekci <strong>Admin Panel</strong> může přidávat nové hry do databáze (včetně odkazu na YouTube trailer).</li>
+        <li>V sekci <strong>Manage Users</strong> může povyšovat běžné uživatele na administrátory nebo jim práva odebírat.</li>
+    </ul>
+
+    <hr style="margin: 40px 0; border: 0; border-top: 2px dashed #ccc;">
+
+    <h1>Programátorská dokumentace (Technical Docs)</h1>
+
+    <h2>1. Architektura</h2>
+    <p>Aplikace je napsána v čistém <strong>PHP (Vanilla PHP)</strong> bez použití frameworků, v souladu s požadavky předmětu.</p>
+    <ul>
+        <li><strong>Frontend:</strong> HTML5, CSS3 (Flexbox/Grid), JavaScript (Fetch API).</li>
+        <li><strong>Backend:</strong> PHP 8+, PDO pro práci s databází.</li>
+        <li><strong>Databáze:</strong> MySQL (Relational DB).</li>
+    </ul>
+
+    <h2>2. Struktura souborů</h2>
+    <ul>
+        <li><code>db.php</code>: Zajišťuje připojení k databázi a kontrolu cookies pro auto-login.</li>
+        <li><code>index.php</code>: Hlavní stránka s výpisem her a stránkováním.</li>
+        <li><code>game.php</code>: Detail hry, logika pro nahrávání obrázků a CRUD operace s recenzemi.</li>
+        <li><code>search-ajax.php</code>: API endpoint, který vrací JSON data pro vyhledávací pole.</li>
+        <li><code>styles.css</code>: Veškeré stylování aplikace (včetně responsivity a stylů pro tisk).</li>
+        <li><code>script.js</code>: Validace formulářů na straně klienta a logika našeptávače.</li>
+    </ul>
+
+    <h2>3. Databázové schéma</h2>
+    <p>Aplikace využívá tři hlavní tabulky propojené cizími klíči:</p>
+    <ul>
+        <li><strong>users:</strong> id, username, email, password (hash), is_admin, remember_token.</li>
+        <li><strong>games:</strong> id, title, description, rating (critic), image_url, trailer_url.</li>
+        <li><strong>reviews:</strong> id, user_id (FK), game_id (FK), content, rating, image_path (JSON), created_at.</li>
+    </ul>
+
+    <h2>4. Bezpečnostní opatření</h2>
+    <ul>
+        <li><strong>SQL Injection:</strong> Všechny dotazy využívají Prepared Statements (PDO).</li>
+        <li><strong>XSS (Cross-Site Scripting):</strong> Veškerý uživatelský vstup je při výpisu ošetřen funkcí <code>htmlspecialchars()</code>.</li>
+        <li><strong>Hesla:</strong> Hesla jsou hashována algoritmem <code>PASSWORD_DEFAULT</code>.</li>
+        <li><strong>Session Fixation:</strong> Identifikátor relace je při přihlášení regenerován.</li>
+    </ul>
+
+</div>
+
+<footer>
+    &copy; 2025 GameCorner Documentation
+</footer>
+
+</body>
+</html>
